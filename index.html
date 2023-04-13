@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/Style.css">
+    <link rel="stylesheet" href="assets/css/response.css">
+    <link rel="shortcut icon" type="image/x-icon" href="Assets/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <title>Weather App</title>
+    
+</head>
+
+<body id="body">
+    <div class="loader">
+        <div class="loader4"></div>
+    </div>
+    <div class="container-fluid text-white main_container">
+        
+        <div class="row">
+            <div class="col-8 justify-content-center" id="mainContainer">
+                <div class="row justify-content-center">
+                    <div class="toggle-button-cover">
+                        <div class="button r" id="button-3">
+                        <input type="checkbox" class="checkbox" />
+                        <div class="knobs"></div>
+                        <div class="layer"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-9 MainArea">
+                    <div class="main">
+                        <div class="temp">
+                             
+                        </div>
+                        <div class="location">
+                            <span class="local"></span>
+                            <span class="configuration"></span>
+                        </div>
+                        <div class="icon">
+                            <img class="IconImage" src="" />
+                        </div>
+                    </div>
+                    
+                    </div>
+                    <div class="col-11 ForcastArea">
+                        <span class="arrow arrow-bar is-right "></span>
+                        <span class="arrow arrow-bar is-left"></span>
+                        <div id="forcastRow" class="row" style="overflow:scroll; flex-wrap: nowrap;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mHam">
+                <div class="hamburger">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
+            </div>
+            <div class="col-4 sideArea" >
+                <div class="row justify-content-center mainSideArea">
+                    <a class="close" onClick="CloseButton();"></a>
+                    <div class="col-12 searchArea">
+                        <input type="text" class="search-area" id="search-area" placeholder="Search Location ..."/>
+                        <button class="WeatherSearchButton">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="col-12 LocationDetails">
+                        <span>London</span>
+                        <span>New York</span>
+                        <span>Tokyo</span>
+                        <span>Paris</span>
+                        <span>Beijing</span>
+                        <span>Barcelona</span>
+                    </div>
+                    <div class="col-12 WeatherDetails">
+                        <span class="heading">Weather Details</span>
+                        <div class="Item"> <span class="d-flex"><span class="material-symbols-outlined icnn"> air </span>&nbsp;Wind Speed</span> <span class="WindSpeedValue w-value"></span> </div>
+                        <div class="Item"> <span class="d-flex"><span class="material-symbols-outlined icnn"> cloudy </span>&nbsp;Clouds</span> <span class="CloudValue w-value"></span> </div>
+                        <div class="Item"> <span class="d-flex"><span class="material-symbols-outlined icnn"> humidity_low </span>&nbsp;Humidity </span> <span class="humidityValue w-value">  </span> </div>
+                        <div class="Item"> <span class="d-flex"><span class="material-symbols-outlined icnn"> near_me </span>&nbsp;Wind Direction</span> <span class="WindDirectionValue w-value"></span> </div>
+                        <div class="Item"> <span class="d-flex"><span class="material-symbols-outlined icnn"> visibility </span>&nbsp;Visibility</span> <span class="VisibilityValue w-value"></span> </div>
+                        <div class="Item"> <span class="d-flex"><span class="material-symbols-outlined icnn"> air </span>&nbsp;Gust Speed</span> <span class="GustSpeedValue w-value"></span> </div>
+                        <div class="Item"> <span class="d-flex"><span class="material-symbols-outlined icnn"> pin_drop </span>&nbsp;Latitude</span> <span class="LatitudeValue w-value"></span> </div>
+                        <div class="Item"> <span class="d-flex"><span class="material-symbols-outlined icnn"> pin_drop </span>&nbsp;Longitude</span> <span class="LongitudeValue w-value"></span> </div>
+                    </div>
+                    <div class="col-12 AirQuality">
+                        <span class="heading">Air Quality <span style="font-weight: 200; font-size: 18px;">(μg/m<sup>3</sup>)</span></span>
+                        <div class="Item"> <span class="d-flex">&nbsp;Carbon Monoxide (CO)</span> <span class="co-value w-value"></span> </div>
+                        <div class="Item"> <span class="d-flex">&nbsp;Ozone (O3)</span> <span class="ozone-value w-value"></span> </div>
+                        <div class="Item"> <span class="d-flex">&nbsp;Nitrogen dioxide (NO2)</span> <span class="no2-value w-value"></span> </div>
+                        <div class="Item"> <span class="d-flex">&nbsp;Sulphur dioxide (SO2)</span> <span class="so2-value w-value"></span> </div>
+                        <div class="Item"> <span class="d-flex">&nbsp;PM2.5</span> <span class="pm25-value w-value"></span> </div>
+                        <div class="Item"> <span class="d-flex">&nbsp;PM10</span> <span class="pm10-value w-value"></span> </div>
+                        <div class="Item AirQualityItem"  style="font-weight: 600; font-size: 19px; background: #a8a8a864; padding: 10px;"> <span class="d-flex">&nbsp;Air Quality</span> <span class="w-value airquality" style="font-weight: 600; font-size: 19px;"></span> </div>
+                    </div>  
+                </div>  
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
