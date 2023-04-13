@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/bootstrap.css">
+    <link rel="stylesheet" href="CSS/Style.css">
+    <link rel="stylesheet" href="CSS/response.css">
+    <link rel="shortcut icon" type="image/x-icon" href="Imgs/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>MyWeatherApp</title>
+</head>
+
+<body style="background-image: url(Imgs/Backgrounds.jpg);">
+    <div class="container-fluid">
+        <div class="row nav-se  justify-content-between">
+            <div class="col-md-3 offset-md-1 df fl align-items-center">
+                <h2 class="log">MyWeatherApp</h2>
+            </div>
+            <div class="col-md-5 sfd fl">
+                <input type="text" class="search-wh" placeholder="Search the Location" value="London">
+                <button type="submit" class="btn-sbm fl"><span class="material-symbols-outlined icn">
+                        search
+                    </span></button>
+            </div>
+        </div>
+        <div class="row  justify-content-center">
+            <div class="col-3  weath-box">
+                <div class="row">
+                    <div class="col-12  location justify-content-center text-center fl">
+                        United Kingdom
+                    </div>
+                    <div class="col-12 location2 justify-content-center fl">
+                        London
+                    </div>
+                    <div class="col-12 time2  justify-content-center fl">
+                        Tuesday, 15 Jan 2022
+
+                    </div>
+                    <div class="col-12 time justify-content-center fl">
+                        3:00 PM
+                    </div>
+                    <div class="col-12 justify-content-center fl">
+                        <img src="//cdn.weatherapi.com/weather/64x64/day/116.png" alt="" class="icn">
+                    </div>
+                    <div class="col-12 temp justify-content-center fl">
+                        25°C
+                    </div>
+                    <div class="col-12 desc text-center justify-content-center fl">
+                        Sunny
+                    </div>
+                </div>
+            </div>
+            <div class="col-7 detaildiv stb">
+                <div class="row  align-items-center align">
+                    <div class="col-md-6 bx1 txt fl justify-content-between mb-1 ">
+
+                        <div class="fl"><span class="material-symbols-outlined icnn">
+                                humidity_low
+                            </span>
+                            Humidity</div>
+                        <pre>  </pre><span class="humid"></span>
+                    </div>
+                    <div class="col-md-6 bx2 txt justify-content-between fl   mb-1">
+                        <div class="fl">
+                            <span class="material-symbols-outlined icnn">
+                                near_me
+                            </span>
+                            Wind Direction
+                        </div>
+                        <pre>  </pre><span class="wind_direction"></span>
+                    </div>
+                    <div class="col-md-6 bx2 txt justify-content-between fl  mb-1">
+                        <div class="fl">
+                            <span class="material-symbols-outlined icnn">
+                                air
+                            </span>
+                            Wind Speed
+                        </div>
+                        <pre>  </pre> <span class="wind_speed"></span>
+                    </div>
+                    <div class="col-md-6 bx2 txt justify-content-between fl mb-1">
+                        <div class="fl"><span class="material-symbols-outlined icnn">
+                                visibility
+                            </span> Visibility</div>
+                        <pre>  </pre> <span class="visi"></span>
+                    </div>
+                    <div class="col-md-6 bx2 txt justify-content-between fl mb-1">
+                        <div class="fl"><span class="material-symbols-outlined icnn">
+                                cloudy
+                            </span> Clouds</div>
+                        <pre>  </pre> <span class="cloud"></span>
+                    </div>
+                    <div class="col-md-6 bx2 txt justify-content-between fl mb-1">
+                        <div class="fl"><span class="material-symbols-outlined icnn">
+                                air
+                            </span> Gust Speed</div>
+                        <pre>  </pre> <span class="gsy"></span>
+                    </div>
+                    <div class="col-md-6 bx2 txt justify-content-between fl mb-1">
+                        <div class="fl"><span class="material-symbols-outlined icnn">
+                                pin_drop
+                            </span> Latitude</div>
+                        <pre>  </pre> <span class="lat"></span>
+                    </div>
+                    <div class="col-md-6 bx2 txt justify-content-between fl mb-1">
+                        <div class="fl"><span class="material-symbols-outlined icnn">
+                                pin_drop
+                            </span> Longitude</div>
+                        <pre>  </pre> <span class="long"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <footer class="container-fluid px-0 h-25 border border-4 d-flex align-items-end justify-content-center"> -->
+        <!-- <div class="row px-0 w-100"> -->
+            <div class="footer px-2 col-12 align-content-center justify-content-center" style="width:103% !important ;">
+                <p class="m-0 pt-1 pb-1">
+                    Copyright &copy; 2022, All Rights reserved by <b> Muhammad Zain</b>
+                </p>
+            </div>
+        <!-- </div> -->
+    <!-- </footer> -->
+
+
+
+
+    <script src="JS/jquery.js"></script>
+    <script src="JS/script.js"></script>
+</body>
+
+</html>

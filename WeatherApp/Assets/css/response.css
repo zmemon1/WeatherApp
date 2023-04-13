@@ -1,0 +1,40 @@
+@media only screen and (max-width: 1046px) {
+    .detaildiv{
+        margin-left:0px;
+        padding-top:50px;
+        padding-bottom:50px;
+        margin-top:30px;
+        margin-bottom: 20px;;
+    }
+    .weath-box{
+        margin-top:50px
+    }
+    .container-fluid{
+        display: contents;
+    }
+    .row{
+        margin-left:0px !important;
+    }
+    /* .footer{ */
+        /* margin-top:50px; */
+    /* } */
+
+}
+@media only screen and (max-width: 759px) {
+    .df{
+        justify-content: center;
+        margin-top:10px;
+    }
+    .sfd{
+        justify-content: center;
+    }
+    /* .footer{ */
+        /* margin-top: 290px; */
+    /* } */
+}
+
+@media only screen and (max-width: 400px) {
+    .btn-sbm{
+        width:18%;
+    }
+}
